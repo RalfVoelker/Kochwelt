@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .like-img {
+            width: 250px;
+            margin-top: 40px;        
+        }
+
+        .green-bg {
+            background-color: rgb(112, 240, 112);
+            text-align: center;
+            margin: 20px 40px;
+            padding: 40px 0px;
+            color: rgb(21, 21, 21);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            
+        }
+        .center{
+        display: flex;
+        justify-content: center;
+        }
+
+        div p{
+            padding: 10px 20px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <link rel="icon" type="image/png" href="/img/logo_small-16.svg 12-30-23-076.svg"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="includeHTML()">
+    <div w3-include-html="./templates/header.html"></div>
+  
+    <div>
+        <div class="center">
+            <img class="like-img " src="./img/like.png" alt="like">
+        </div>
+        
+        <h2  class="green-bg">Erfolgreich versendet</h2>
+    </div>
+
+    <div>
+        <p class="center">
+            Ihre E-Mail wurde abgesendet. Wir werden uns in kürze bei ihnen melden.
+        </p>
+    </div>
+    
+    <div w3-include-html="./templates/footer.html"></div>
+</body>
+</html>

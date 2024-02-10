@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js"></script>
+  </head>
+  
+  <body onload="includeHTML()">
+
+    <div w3-include-html="./templates/header.html"></div>
+    <!-- <div class="header" w3-include-html="./templates/header.html"></div> -->
+    <div id="menu-content"></div>
+     <section class="contact" >        
+        <h3>Du hast eine Frage oder ein neues Rezept? <br> Dann schreib uns! </h2>
+        <div class="form">         
+          <form onsubmit="sendMail(event)">
+              <label for="nname" class="flexlabel">Dein Name:</label>
+              <input type="text" id="nname" name="Name" placeholder="Name" required />
+
+              <label for="mail" class="flexlabel">Deine E-Mail-Adresse:</label>
+              <input type="email" id="mail" name="Email von:" placeholder="E-Mail-Adresse" required />
+
+              <label for="message" class="flexlabel">Deine Nachricht:</label>
+              <textarea name="Nachricht" id="message" placeholder="Nachricht..." required></textarea>
+            
+            <div class="checkbox-container">
+              <input type="checkbox" id="privacy" name="Datenschutz" required />
+              <label for="privacy" required>Ich akzeptiere die <a href="./datenschutz.html"
+                target="_blank">Datenschutzbestimmungen</a></label>
+            </div>
+
+              <input id="send" type="submit" value="Absenden" />
+          </form>
+        </div>
+      </section>
+   
+    <div w3-include-html="./templates/footer.html"></div>
+  </body>
+</html>

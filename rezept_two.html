@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt-Tomatensuppe</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <script>
+        let table_content = [
+        [0.25, "", "Zwiebel(n)"],
+        [0.25, "EL", "Bratöl"],
+        [0.5, "Dose(n)", " stückige Tomaten (á 400g)"],
+        [0.5, "Dose(n)", " Kokosmilch (á 400ml)"],
+        [25, "ml", "Wasser"],
+        [0.5, "EL", "Gemüsebrühe"],
+        [0.25, "TL", "Zucker"],
+        [0.25, "Bund", "frische Petersilie"],
+        [0.25, "", "Zitrone(n)"],
+        [0.2, "Prise(n)", "Salz & Pfeffer"], 
+      ];
+    </script>
+  </head>
+  <body onload="includeHTML(); calculationTab()">
+    <div w3-include-html="templates/header.html"></div>
+    <div id="menu-content"></div>
+    <section class="section_1r">
+      <h1>Tomatensuppe</h1>
+      <img class="img_s1r" src="img/Tomatensuppe.jpg" alt="" />
+      <div class="info">
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/clock-regular.svg" alt="" />
+          <span>20 Min.</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/brain-solid.svg" alt="" />
+          <span>Einfach</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/calendar-alt-regular.svg" alt="" />
+          <span>08.12.2023</span>
+        </div>
+      </div>
+      <div class="bar bg-gray"></div>
+    </section>
+    <section class="section_2r">
+      <div class="portionfeld">
+        <label>
+          Zutaten für
+          <input id="amount" type="number" min="1" value="4" />
+          <button class="btn" onclick="calculationTab()">Portionen</button>
+        </label>
+      </div>
+      <table>
+        <tbody id="table">
+          <!-- table content is filled by JS -->
+        </tbody>
+      </table>
+    </section>
+    <section class="section_3r">
+      <h1>Zubereitung</h1>
+      <div class="info">
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>Vorbereitungszeit 10 Min</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>Gesamtzeit 20 Min.</span>
+        </div>
+      </div>
+      <span class="info_zubereitung">
+        Die Zwiebel(n) fein würfeln und den Saft der Zitrone(n) auspressen. In der Zwischenzeit 1 EL Bratöl in 
+        einem Topf erhitzen. Sobald das Öl heiß ist, die Zwiebelwürfel dünsten, bis diese glasig sind. 
+        Im Anschluss stückige Tomaten, Kokosmilch, Wasser, 1 EL Gemüsebrühe und Zucker hinzufügen. 
+        Den Topfinhalt zum Kochen bringen und anschließend für 10 Minuten bei niedriger Hitze köcheln lassen. 
+        Nach Ablauf der Kochzeit die Suppe mit einem Pürierstab pürieren und mit Petersilie, Zitronensaft, Salz & 
+        Pfeffer abschmecken.
+      </span>
+      <div class="creator">
+        <h3>Rezept erstellt von</h3>
+        <div class="profile">
+          <img src="img/isabell.jpg" alt="" class="profile_image"/>
+          <span>Isabell</span>
+        </div>
+      </div>
+    </section>
+    <div w3-include-html="templates/footer.html"></div>
+  </body>
+</html>

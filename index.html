@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body onload="includeHTML()">
+    <div w3-include-html="templates/header.html"></div>
+    <div id="menu-content"></div>
+    <section class="section_1in">
+      <img src="img/rosenkohl.jpeg" alt="" class="img_big" />
+
+      <div class="text_box_s1in">
+        <h1>Rosenkohl mit Speck</h1>
+
+        <span>
+          Ein leckeres Rosenkohl mit Speck Gericht kann leicht zu Hause
+          mit nur 30 Minuten Aufwand zubereitet werden. Hier ist eine einfache
+          Rezeptur, um loszulegen!
+        </span>
+
+        <a class="btn" href="rezept_des_tages.html">Rezept öffnen</a>
+      </div>
+    </section>
+
+    <section class="section_2in bg-gray">
+      <h1>Lust auf was Neues?</h1>
+      <div class="img-text-container">
+        <a href="rezept_one.html" class="img-text">
+          <img class="img_little" src="img/waffles.jpg" alt="" />
+          <span> Waffeln </span>
+        </a>
+        <a href="rezept_two.html" class="img-text">
+          <img class="img_little" src="img/Tomatensuppe.jpg" alt="" />
+          <span> Tomatensuppe </span>
+        </a>
+        <a href="rezept_three.html" class="img-text">
+          <img class="img_little" src="img/filettopf.jpg" alt="" />
+          <span> Filettopf </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section_3in">
+      <h1>Pfanne vs. Wok - Was ist besser?</h1>
+      <div class="text-img">
+        <span>
+          Die Wahl zwischen einer Pfanne und einem Wok hängt von den
+          Kochbedürfnissen und persönlichen Vorlieben ab. Pfannen sind ideal für
+          das Braten, Schmoren und Zubereiten von Saucen mit ihrer flachen
+          Oberfläche. Ein Wok hingegen ist besonders effektiv für das schnelle
+          Rühren und Schwenken von Zutaten bei hohen Temperaturen, was ihn
+          perfekt für die asiatische Küche macht.
+          <br />
+          <br />
+          Pfannen ermöglichen eine gleichmäßige Hitzeverteilung und sind
+          vielseitig einsetzbar für eine Vielzahl von Gerichten aus
+          verschiedenen Küchen. Die tiefen Seiten eines Woks eignen sich gut für
+          das gleichmäßige Garen von Gemüse, Fleisch und anderen Zutaten in
+          kurzer Zeit.
+          <br />
+          <br />
+          Für Pfannengerichte mit Saucen und Eintöpfen ist eine Pfanne oft
+          besser geeignet, während ein Wok für schnelles Anbraten und Rühren
+          perfekt ist. Die Entscheidung zwischen Pfanne und Wok hängt somit
+          stark von den individuellen Kochgewohnheiten und den bevorzugten
+          Gerichten ab.
+        </span>
+        <img class="img_little" src="img/wok.jpg" alt="" />
+      </div>
+    </section>
+
+    <div w3-include-html="templates/footer.html"></div>
+  </body>
+</html>

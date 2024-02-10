@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt-Waffeln</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <script>
+        let table_content = [
+        [12.5, "g", "Zucker"],
+        [12.5, "g", "Butter"],
+        [0.3, "", "Ei(er)"],
+        [0.1, "Pck", "Vanillinzucker"],
+        [25, "g", "Mehl"],
+        [25, "ml", "Milch"],
+        [0.1, "TL", "Backpulver"],
+      ];
+    </script>
+  </head>
+  <body onload="includeHTML(); calculationTab()">
+    <div w3-include-html="templates/header.html"></div>
+    <div id="menu-content"></div>
+    
+    <section class="section_1r">
+      <h1>Waffeln</h1>
+      <img class="img_s1r" src="img/waffles.jpg" alt="" />
+      <div class="info">
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/clock-regular.svg" alt="" />
+          <span>30 Min.</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/brain-solid.svg" alt="" />
+          <span>Einfach</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/calendar-alt-regular.svg" alt="" />
+          <span>09.12.2023</span>
+        </div>
+      </div>
+      <div class="bar bg-gray"></div>
+    </section>
+    <section class="section_2r">
+      <div class="portionfeld">
+        <label>
+          Zutaten für
+          <input id="amount" type="number" min="1" value="10" />
+          <button class="btn" onclick="calculationTab()">Portionen</button>
+        </label>
+      </div>
+      <table>
+        <tbody id="table">
+          <!-- table content is filled by JS -->
+        </tbody>
+      </table>
+    </section>
+    <section class="section_3r">
+      <h1>Zubereitung</h1>
+      <div class="info">
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>Arbeitszeit ca. 10 Minuten</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>Backzeit ca. 20 Minuten</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>Gesamtzeit ca. 30 Minuten</span>
+        </div>
+      </div>
+      <span class="info_zubereitung">
+        Zuerst Eier, Zucker und Vanillezucker mit einem Handrührgerät auf
+        höchster Stufe verrühren. Anschließend Margarine hinzufügen und kurz
+        verrühren. Abschließend Backpulver, Mehl, Milch und Salz gemeinsam
+        hinzufügen, mixen und portionsweise im gefetteten Waffeleisen goldgelb
+        backen.
+        <br />
+        <br />
+        Tipp: Nicht pur genießen! Beim Servieren auf die warmen Waffeln
+        Konfitüren (Kirsch oder Aprikosen), Nutella, Puderzucker oder Zimtzucker
+        geben. Wer die Beilage jedoch selber machen will, kann auch einfach ein
+        Glas Sauerkirschen in einen Topf geben, etwas Speisestärke und Zucker
+        hinzufügen. Die ganz Raffinierten rühren in den Teig schon den
+        Extrawunsch ein (Nutella, Kakao, Äpfel).
+      </span>
+      <div class="creator">
+        <h3>Rezept erstellt von</h3>
+        <div class="profile">
+          <img src="img/profile.png" alt="" class="profile_img" />
+          <span>Lucas Weiß</span>
+        </div>
+      </div>
+    </section>
+    <div w3-include-html="templates/footer.html"></div>
+  </body>
+</html>

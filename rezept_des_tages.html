@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt-Rosenkohl mit Speck</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <script>
+        let table_content = [
+        [250, "g", "Rosenkohl"],
+        [0.5, "EL", "Butter"],
+        [50, "g", "Speck"],
+        [125, "ml", "Gemüsebrühe, instant"],
+        [100, "ml", "Sahne"],
+        [0.2, "Prise(n)", "Salz und Pfeffer"],
+        [0.2, "Prise(n)", "Muskat"],
+        
+      ];
+    </script>
+  </head>
+  <body onload="includeHTML(); calculationTab()">
+    <div w3-include-html="templates/header.html"></div>
+    <div id="menu-content"></div>
+    
+    <section class="section_1r">
+      <h1>Rosenkohl mit Speck</h1>
+      <img class="img_s1r" src="img/rosenkohl.jpeg" alt="" />
+      <div class="info">
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/clock-regular.svg" alt="" />
+          <span>25 Min.</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/brain-solid.svg" alt="" />
+          <span>Normal</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/calendar-alt-regular.svg" alt="" />
+          <span>28.09.2020</span>
+        </div>
+      </div>
+      <div class="bar bg-gray"></div>
+    </section>
+    <section class="section_2r">
+      <div class="portionfeld">
+        <label>
+          Zutaten für
+          <input id="amount" type="number" min="1" value="2" />
+          <button class="btn" onclick="calculationTab()">Portionen</button>
+        </label>
+      </div>
+      <table>
+        <tbody id="table">
+          <!-- table content is filled by JS -->
+        </tbody>
+      </table>
+    </section>
+    <section class="section_3r">
+      <h1>Zubereitung</h1>
+      <div class="info">
+        
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>Gesamtzeit ca. 25 Minuten</span>
+        </div>
+      </div>
+      <span class="info_zubereitung">
+        Zunächst wird das Gemüse gewaschen, die äußeren Schalen der Röschen
+          werden entfernt. Den Speck in kleine Stücke schneiden. Die Gemüsebrühe
+          anrühren. Einen Esslöffel Butter in einem Topf schmelzen, den Speck
+          darin anbraten. Den Kohl dazugeben und die Gemüsebrühe angießen.
+          Möglichst die ganze Brühe verdampfen lassen (also ohne Deckel kochen).
+          Achtung: Nichts verbrennen lassen! Lieber einen kleinen Rest der Brühe
+          im Topf behalten. Nun noch die Sahne zugeben und etwas einkochen
+          lassen. Mit Salz, Pfeffer und Muskat abschmecken.
+      </span>
+      <div class="creator">
+        <h3>Rezept erstellt von</h3>
+        <div class="profile">
+          <img src="img/profile.png" alt="" class="profile_img" />
+          <span>Benni</span>
+        </div>
+      </div>
+    </section>
+    <div w3-include-html="templates/footer.html"></div>
+  </body>
+</html>

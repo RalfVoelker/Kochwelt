@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_small.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <script>
+      let table_content = [
+        [170, "g", "Schweinefilet"],
+        [0.17, "EL", "Öl"],
+        [0.17, "EL", "Butter"],
+        [0.5, "Prise(n)", "Salz und Pfeffer"],
+        [0.33, "Stück", "mittlere-große	Zwiebel(n), fein gewürfelt"],
+        [0.17, "Stück", "Knoblauchzehe(n), fein gewürfelt"],
+        [16.7, "g", "Katenschinken, in sehr kleine Würfel geschnitten"],
+        [83.3, "g", "Champignons"],
+        [33.3, "g", "Fleischbrühe oder Gemüsebrühe"],
+        [33.3, "g", "Sahne"],
+        [33.3, "g", "Crème fraîche oder Schmand"],
+        [0.17, "EL", "Tomatenmark, 3-fach konzentriert"],
+        [0.17, "TL", "Senf"],
+        [0.17, "Bund", "Petersilie, gehackt, oder 3 EL TK-Ware"],
+      ];
+    </script>
+  </head>
+  <body onload="includeHTML(); calculationTab()">
+    <div w3-include-html="templates/header.html"></div>
+    <div id="menu-content"></div>
+    <section class="section_1r">
+      <h1>Filettopf</h1>
+      <img class="img_s1r" src="img/filettopf.jpg" alt="" />
+      <div class="info">
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/clock-regular.svg" alt="" />
+          <span>30 Min.</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/brain-solid.svg" alt="" />
+          <span>Einfach</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img class="icons" src="img/icons/calendar-alt-regular.svg" alt="" />
+          <span>06.12.2023</span>
+        </div>
+      </div>
+      <div class="bar bg-gray"></div>
+    </section>
+    <section class="section_2r">
+      <div class="portionfeld">
+        <label>
+          Zutaten für
+          <input id="amount" type="number" min="1" value="4" />
+          <button class="btn" onclick="calculationTab()">Portionen</button>
+        </label>
+      </div>
+      <table>
+        <tbody id="table">
+          <!-- table content is filled by JS -->
+        </tbody>
+      </table>
+    </section>
+    <section class="section_3r">
+      <h1>Zubereitung</h1>
+      <div class="info">
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>30 Minuten</span>
+        </div>
+        <div class="info_container bg-gray">
+          <img src="img/icons/clock-regular.svg" alt="" class="icons" />
+          <span>Gesamtzeit: ca. 25 Stunden</span>
+        </div>
+      </div>
+      <span class="info_zubereitung">
+        Vom Schweinefilet die weiße Haut entfernen. Das Öl mit der Butter
+        erhitzen, nicht zu heiß werden lassen. Das Fleisch mit Salz und Pfeffer
+        würzen und ca. 10 Minuten von allen Seiten braten. Es soll innen noch
+        rosa sein. Dann herausnehmen und auf einem Teller (damit der Fleischsaft
+        aufgefangen wird) erkalten lassen. Im Bratfett Zwiebeln, Knoblauch und
+        Schinken gut bräunen. Die Champignons putzen und in Scheiben schneiden
+        und mitbraten. Dann mit Brühe ablöschen und Sahne und Crème fraîche oder
+        Schmand und den ausgetretenen Fleischsaft zugeben. Die Soße mit Salz,
+        Pfeffer, Tomatenmark und Senf kräftig abschmecken. Sollte sie zu flüssig
+        sein, etwas Speisestärke in wenig kaltem Wasser anrühren und unter
+        Rühren zur kochenden Soße geben, bis zur gewünschten Konsistenz. Die
+        Soße abkühlen lassen. Das kalte Fleisch in 1 cm breite Scheiben
+        schneiden und dann in Streifen. Dann in die Soße geben, die Petersilie
+        dazu und durchrühren, kühl stellen. Am nächsten Tag das Gericht auf
+        kleiner Flamme erhitzen, jedoch nicht mehr kochen. So bleibt das Fleisch
+        rosa. Die Soße nochmals abschmecken. Dazu schmeckt Baguette, aber auch
+        Spätzle und Salat.
+      </span>
+      <div class="creator">
+        <h3>Rezept erstellt von</h3>
+        <div class="profile">
+          <img src="img/ralf.jpg" alt="" class="profile_img" />
+          <span>Ralf</span>
+        </div>
+      </div>
+    </section>
+    <div w3-include-html="templates/footer.html"></div>
+  </body>
+</html>
